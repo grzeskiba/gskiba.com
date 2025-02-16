@@ -7,8 +7,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-  basePath:
-    process.env.NODE_ENV === 'production' ? '/grzeskiba/gskiba.com' : '', // Add your repository name
+  basePath: process.env.NODE_ENV === 'production' ? '/grzeskiba' : '', // Add your repository name
 };
 
 module.exports = nextConfig;
