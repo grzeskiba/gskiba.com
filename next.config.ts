@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // Enables static exports
+  images: {
+    unoptimized: true, // Required for static export
+  },
+  basePath:
+    process.env.NODE_ENV === 'production' ? '/grzeskiba/gskiba.com' : '', // Add your repository name
 };
 
-export default nextConfig;
+module.exports = nextConfig;
